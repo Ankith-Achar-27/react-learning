@@ -22,9 +22,36 @@
 
     };
 
+    function ChatMessage({ message, sender }){
+        //const message = props.message;
+        //const sender = props.sender;
+        //const { message, sender } = props;
+
+        if(sender === 'robot'){
+            return (
+                <div>
+                    <img src="assets/bot.png" width="50" />
+                    {message}
+                </div>
+            );
+        }
+
+
+        return (
+            <div>
+                {message}
+                <img src="assets/user.png" width="50" />
+            </div>
+        );
+    }
+
     const app = (
         <>
-            <ChatInput></ChatInput>
+            <ChatInput />
+            <ChatMessage message="hello chatbot." sender="user" />
+            <ChatMessage message="Hello! How can I help you?" sender="robot" />
+            <ChatMessage message="Can you get me todays date?" sender="user" />
+            <ChatMessage message="Today is October 5." sender="robot" />
         </>
     );
     const container = document.querySelector('.js-container');
