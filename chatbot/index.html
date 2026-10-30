@@ -2,80 +2,7 @@
 <html>
 <head>
     <title>ChatBot</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-
-        .send-button{
-            background-color: #00bffd;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 10px;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        .chat-input{
-            padding: 12px 15px;
-            border-radius: 10px;
-            border-width: 1px;
-            font-size: 15px;
-            flex-grow: 1;
-        }
-        .chat-input-container{
-            display: flex;
-            margin-bottom: 60px;
-            gap: 10px;
-        }
-        .chat-message-user{
-            display: flex;
-            justify-content: end;
-            align-items: start;
-        }
-        .chat-message-robot {
-            display: flex;
-            align-items: start;
-        }
-        .chat-message-profile {
-            width: 45px;
-        }
-        .chat-message-text{
-            background-color: rgb(238, 238, 238);
-            padding: 15px 20px;
-            border-radius: 10px;
-            margin-right: 10px;
-            margin-left: 10px;
-            margin-bottom: 20px;
-            max-width: 300px;
-        }
-        .chat-messages-container{
-            flex-grow: 1;
-            margin-top: 20px;
-            overflow: scroll;
-            scrollbar-width: none;
-        }
-        .welcome-message {
-            color: rgb(120, 120, 120);
-            text-align: center;
-        }
-        .loading-spinner {
-            height: 40px;
-            margin: -15px;
-        }
-        .app-container{
-            max-width: 600px;
-            margin-right: auto;
-            margin-left: auto;
-
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles/chatbot.css">
 </head>
 <body>
 <div class="js-container"></div>
@@ -95,6 +22,9 @@
 
 
         async function sendMessage(){
+            if (!inputText.trim()) {
+                return;
+            }
 
             const newChatMessage = [
                 ...chatMessages,
@@ -136,10 +66,16 @@
 
         return (
             <div className="chat-input-container">
+
                 <input
                     placeholder="Send a message to chatbot"
                     size="30"
                     onChange={saveInputText}
+                    onKeyDown={(event) => {
+                        if (event.key === 'Enter') {
+                            sendMessage();
+                        }
+                    }}
                     value={inputText}
                     className="chat-input"
                 />
@@ -226,27 +162,7 @@
 
 
     function App(){
-        const [chatMessages, setChatMessages] = React.useState([
-            {
-                message:'hello chatbot',
-                sender:'user',
-                id: 'id1'
-            },
-            {
-                message:'Hello! How can I help you?',
-                sender:'robot',
-                id: 'id2'
-            },
-            {
-                message:'Can you get me today\'s date?',
-                sender:'user',
-                id: 'id3'
-            },
-            {
-                message:'Today is October 5.',
-                sender:'robot',
-                id: 'id4'
-            }]);
+        const [chatMessages, setChatMessages] = React.useState([]);
 
         return (
             <div className="app-container">
