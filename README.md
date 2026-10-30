@@ -1,139 +1,90 @@
 # React Learning
 
-A hands-on repository for learning React, covering core concepts, components, hooks, state management, API integration, and practical projects.
-
-## 📚 Topics Covered
-
-### 1. React Basics
-- React fundamentals
-- JSX
-- Components
-- Props
-- State
-- Event handling
-- Conditional rendering
-- Lists and keys
-
-### 2. React Hooks
-- `useState`
-- `useEffect`
-- Managing component state
-- Working with side effects
-
-### 3. React Setup
-- Setting up React using CDN
-- Using JSX with Babel
-- Introduction to Vite
-- Project organization
-- Git and GitHub
-
-### 4. Event Handling and State Management
-- Handling user input
-- Responding to button clicks
-- Handling keyboard events
-- Updating state using `useState`
-- Controlled input fields
-- Managing arrays in React state
-
-### 5. Conditional Rendering and Lists
-- Rendering elements conditionally
-- Displaying lists using `map()`
-- Working with unique keys
-- Dynamically rendering components
-
-### 6. Asynchronous JavaScript
-- Promises
-- `async/await`
-- Handling asynchronous operations
-- Simulating loading delays
-- Displaying loading indicators
-
-### 7. API Integration
-- Fetching data from APIs
-- Sending requests
-- Processing API responses
-- Loading and error handling
-- Connecting React applications with backend services
-
-### 8. React Router
-- Client-side routing
-- Multiple pages
-- Navigation
-- Route parameters
-
-### 9. Testing
-- Automated testing in React
-- Vitest
-- Testing React components and application behavior
-
-### 10. Deployment
-- Building React applications
-- Deploying React applications
-- Introduction to AWS
-
-### 11. Modern React
-- Modern React features and patterns
-- React 19
-- Component-based application development
-
-### 12. TypeScript with React
-- TypeScript fundamentals
-- Typing props and state
-- Type-safe React components
-
-### 13. AI with React
-- Integrating chatbot functionality into React applications
-- Displaying user and chatbot messages
-- Managing conversation state
-- Handling asynchronous responses
-- Implementing loading indicators
-
----
+A hands-on repository documenting my journey of learning React through practical projects, coding exercises, and experiments with modern web development.
 
 ## 🚀 Projects
 
 ### 1. React Chatbot
 
-A simple chatbot application built with React to practise components, state management, event handling, and asynchronous operations.
+A simple interactive chatbot built using React to practise fundamental concepts and user interactions.
 
 **Features**
-- Send messages using the Send button
-- Send messages by pressing Enter
-- Display user and chatbot messages
-- Manage conversation messages using React state
-- Display a loading spinner while waiting for a response
-- Clear the input field after sending a message
-- Prevent empty messages from being sent
-- Organize CSS into a separate stylesheet
+- Send messages using the Send button or Enter key.
+- Display user and chatbot messages.
+- Manage conversation state using `useState`.
+- Display a loading spinner while waiting for a response.
+- Clear the input field after sending a message.
+- Prevent empty messages from being sent.
 
-**Technologies Used**
-- React
-- JavaScript
-- JSX
-- HTML
-- CSS
-- Babel
+**Technologies:** React, JavaScript, JSX, HTML, CSS, Babel
 
-**Project Location:** [`chatbot/`](chatbot/)
+**Project files:** [`chatbot/index.html`](chatbot/index.html)
 
-**Entry Point:** [`chatbot/index.html`](chatbot/index.html)
+### 2. React Basics
+
+A collection of examples and exercises covering the fundamentals of React.
+
+**Topics**
+- React fundamentals and JSX
+- Components and props
+- State management
+- Event handling
+- Conditional rendering
+- Rendering lists and working with keys
+
+**Project files:** [`React-basics.html`](React-basics.html)
 
 ---
 
-## 🛠️ Tech Stack
+## 📚 Topics Covered
+
+### React Fundamentals
+- React and JSX
+- Components and props
+- State and event handling
+- Conditional rendering
+- Lists and keys
+
+### React Hooks
+- `useState`
+- `useEffect`
+- State management
+- Side effects
+
+### JavaScript and Asynchronous Operations
+- Promises
+- `async/await`
+- Handling user input
+- Asynchronous operations
+- Loading indicators
+
+### API Integration
+- Fetching data from APIs
+- Sending requests
+- Processing API responses
+- Loading and error handling
+
+### React Ecosystem
+- Vite
+- React Router
+- Vitest
+- TypeScript with React
+- React 19 features
+- Deployment fundamentals
+
+---
+
+## 🛠️ Technologies
 
 - React
 - JavaScript
 - JSX
 - HTML5
 - CSS3
-- TypeScript
-- Vite
-- React Router
-- Vitest
-- REST APIs
-- Git & GitHub
-- AWS
+- Babel
+- Git and GitHub
+
+Additional technologies and tools will be introduced as projects evolve.
 
 ---
 
@@ -142,28 +93,28 @@ A simple chatbot application built with React to practise components, state mana
 ```text
 react-learning/
 │
+├── index.html                 # Main project homepage
+├── styles.css                 # Homepage styling
+├── assets/                    # Homepage assets, if needed
+│
 ├── chatbot/
 │   ├── assets/
-│   │   └── ...
 │   ├── styles/
 │   │   └── chatbot.css
 │   └── index.html
 │
-├── .gitignore
+├── React-basics.html
 ├── README.md
-└── React-basics.html
+└── .gitignore
 ```
 
 ---
 
-## 🎯 Learning Goals
+## 🌐 Project Homepage
 
-- Strengthen React fundamentals through hands-on practice.
-- Understand how components communicate and render.
-- Learn to manage state and handle user interactions.
-- Build interactive applications using React.
-- Practise organizing project files and stylesheets.
-- Gradually progress toward more advanced React applications.
+The repository includes a custom homepage built with HTML and CSS to showcase the projects in one place.
+
+The homepage provides links to individual projects and serves as a central entry point for exploring the repository.
 
 ---
 
@@ -173,4 +124,4 @@ react-learning/
 
 Computer Science Engineering Student
 
-GitHub: [@Ankith-Achar-27](https://github.com/Ankith-Achar-27)
+GitHub: [Ankith-Achar-27](https://github.com/Ankith-Achar-27)
